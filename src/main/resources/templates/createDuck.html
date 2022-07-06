@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title "Create Duck"></title>
+		<link rel="stylesheet" href="/css/duck.css"/>
+	</head>
+	<body>
+		<div class="duck-container">
+		  <div th:each="duck : ${ducks}" th:inline="text">
+		  	<span class="timestamp">[[${duck.user.name}]]: </span>
+		  	<span class="duck">[[${duck.text}]]</span>
+		  </div>
+		</div>
+		<div class="duck-form">
+			<textarea rows="3" cols="30" id="duckForm"></textarea>
+		</div>
+		<script type="text/javascript" src="/js/duck.js"></script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Ducks</title>
+	</head>
+	<body>
+		<h2>Ducks</h2>
+		<div th:each="duck : ${ducks}">
+			<a th:href="@{/duckss/{duckId}(duckId=${duck.duckId})}" th:text="${duck.name}"></a>
+		</div>
+	</body>
+</html>
